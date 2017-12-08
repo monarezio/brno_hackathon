@@ -23,6 +23,18 @@
                         Log out
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-light">
+                        <span class="mr-2"><i class="fas fa-car"></i></span>
+                        Traffic
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" v-on:click.prevent="logout()" class="nav-link text-danger">
+                        <span class="mr-2"><i class="fas fa-sign-out-alt"></i></span>
+                        Log out
+                    </a>
+                </li>
             </ul>
             <p class="mt-auto copy text-muted">
                 Smart Brno 2018
