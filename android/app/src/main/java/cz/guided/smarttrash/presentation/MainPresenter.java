@@ -9,9 +9,4 @@ public class MainPresenter extends Presenter<MainView> {
         super.onCreate(savedState);
     }
 
-    public void login() {
-        viewIfExists().subscribe(view -> {
-            view.login();
-        });
-    }
 }

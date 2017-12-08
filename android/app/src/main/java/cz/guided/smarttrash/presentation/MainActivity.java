@@ -4,6 +4,8 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,6 +17,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import cz.guided.smarttrash.R;
 import nucleus.factory.RequiresPresenter;
 import nucleus.view.NucleusActivity;
@@ -27,8 +30,11 @@ public class MainActivity extends NucleusActivity<MainPresenter> implements Main
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
-    @BindView(R.id.xd)
-    TextView text;
+    @BindView(R.id.email)
+    EditText emailText;
+
+    @BindView(R.id.pwd)
+    EditText pwdText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,8 +72,13 @@ public class MainActivity extends NucleusActivity<MainPresenter> implements Main
         }
     }
 
+    @OnClick(R.id.login)
+    public void submit() {
+        login(emailText.getText().toString(), pwdText.getText().toString());
+    }
+
     @Override
-    public void login(String email,String password){
+    public void login(String email, String password) {
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
