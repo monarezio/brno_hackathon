@@ -6,6 +6,9 @@ target 'Smart Trash' do
   use_frameworks!
 
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'PopupDialog', '~> 0.6'
+  pod 'NVActivityIndicatorView'
 
   # Pods for Smart Trash
 
