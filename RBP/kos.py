@@ -2,6 +2,20 @@ from uuid import getnode
 import json
 import RPi.GPIO as GPIO
 import time
+import pyrebase
+import firebase_admin
+from firebase_admin import credentials
+
+config = {
+	"apiKey": "AlzaSyDX19wtQEpULBLgxnisPqN7iFUF8TTvhP0",
+	"authDomain": "smart-trash-78dcb.firebaseapp.com",
+	"databaseURL": "https://smart-trash-78dcb.firebaseio.com",
+	"storageBucket": "smart-trash-78dcb.appspot.com"
+}
+
+firebase = pyrebase.initialize_app(config)
+auth = firebase.auth()
+db = firebase.database()
 
 GPIO.setmode(GPIO.BCM)
 
@@ -28,3 +42,10 @@ while GPIO.input(ECHO)==1:
 	
 pulse_duration = pulse_end - pulse_start
 print(str(pulse_duration))
+
+data = {
+	"id" : str(hex(name)),
+	"duration": str(pulse_duration)
+}
+
+fResult = db.child("reading").push(data)
