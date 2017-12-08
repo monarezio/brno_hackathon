@@ -6,6 +6,7 @@ target 'Smart Trash' do
   use_frameworks!
 
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
 
   # Pods for Smart Trash
 

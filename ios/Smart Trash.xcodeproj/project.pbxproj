@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		04BDC312496FF4D61D82B4EF /* Pods_Smart_Trash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2991BC848FE74741BC3B12 /* Pods_Smart_Trash.framework */; };
 		E84F17891FDAD7AE00CBCC43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84F17881FDAD7AE00CBCC43 /* AppDelegate.swift */; };
-		E84F178B1FDAD7AE00CBCC43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84F178A1FDAD7AE00CBCC43 /* ViewController.swift */; };
+		E84F178B1FDAD7AE00CBCC43 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84F178A1FDAD7AE00CBCC43 /* LoginController.swift */; };
 		E84F178E1FDAD7AE00CBCC43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84F178C1FDAD7AE00CBCC43 /* Main.storyboard */; };
 		E84F17901FDAD7AE00CBCC43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E84F178F1FDAD7AE00CBCC43 /* Assets.xcassets */; };
 		E84F17931FDAD7AE00CBCC43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84F17911FDAD7AE00CBCC43 /* LaunchScreen.storyboard */; };
+		E84F179F1FDAE5FA00CBCC43 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84F179E1FDAE5FA00CBCC43 /* LoginManager.swift */; };
+		E84F17A21FDAE69F00CBCC43 /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84F17A11FDAE69F00CBCC43 /* LoginProtocol.swift */; };
+		E84F17A51FDAF8BD00CBCC43 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E84F17A41FDAF8BD00CBCC43 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +23,14 @@
 		5E2991BC848FE74741BC3B12 /* Pods_Smart_Trash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Trash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E84F17851FDAD7AE00CBCC43 /* Smart Trash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Trash.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E84F17881FDAD7AE00CBCC43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E84F178A1FDAD7AE00CBCC43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E84F178A1FDAD7AE00CBCC43 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		E84F178D1FDAD7AE00CBCC43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E84F178F1FDAD7AE00CBCC43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E84F17921FDAD7AE00CBCC43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E84F17941FDAD7AE00CBCC43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E84F179A1FDAD8C500CBCC43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E84F179E1FDAE5FA00CBCC43 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		E84F17A11FDAE69F00CBCC43 /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
+		E84F17A41FDAF8BD00CBCC43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F89D6078E460A3542079A278 /* Pods-Smart Trash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Trash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smart Trash/Pods-Smart Trash.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,15 +84,41 @@
 		E84F17871FDAD7AE00CBCC43 /* Smart Trash */ = {
 			isa = PBXGroup;
 			children = (
+				E84F179C1FDAE37F00CBCC43 /* Presentation */,
+				E84F179B1FDAE36B00CBCC43 /* Domain */,
 				E84F17881FDAD7AE00CBCC43 /* AppDelegate.swift */,
-				E84F178A1FDAD7AE00CBCC43 /* ViewController.swift */,
 				E84F178C1FDAD7AE00CBCC43 /* Main.storyboard */,
 				E84F178F1FDAD7AE00CBCC43 /* Assets.xcassets */,
 				E84F17911FDAD7AE00CBCC43 /* LaunchScreen.storyboard */,
-				E84F179A1FDAD8C500CBCC43 /* GoogleService-Info.plist */,
+				E84F17A41FDAF8BD00CBCC43 /* GoogleService-Info.plist */,
 				E84F17941FDAD7AE00CBCC43 /* Info.plist */,
 			);
 			path = "Smart Trash";
+			sourceTree = "<group>";
+		};
+		E84F179B1FDAE36B00CBCC43 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				E84F17A01FDAE62D00CBCC43 /* Login */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		E84F179C1FDAE37F00CBCC43 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E84F178A1FDAD7AE00CBCC43 /* LoginController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		E84F17A01FDAE62D00CBCC43 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E84F179E1FDAE5FA00CBCC43 /* LoginManager.swift */,
+				E84F17A11FDAE69F00CBCC43 /* LoginProtocol.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E84F17931FDAD7AE00CBCC43 /* LaunchScreen.storyboard in Resources */,
+				E84F17A51FDAF8BD00CBCC43 /* GoogleService-Info.plist in Resources */,
 				E84F17901FDAD7AE00CBCC43 /* Assets.xcassets in Resources */,
 				E84F178E1FDAD7AE00CBCC43 /* Main.storyboard in Resources */,
 			);
@@ -201,11 +233,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Smart Trash/Pods-Smart Trash-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -221,8 +255,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E84F178B1FDAD7AE00CBCC43 /* ViewController.swift in Sources */,
+				E84F178B1FDAD7AE00CBCC43 /* LoginController.swift in Sources */,
+				E84F17A21FDAE69F00CBCC43 /* LoginProtocol.swift in Sources */,
 				E84F17891FDAD7AE00CBCC43 /* AppDelegate.swift in Sources */,
+				E84F179F1FDAE5FA00CBCC43 /* LoginManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
