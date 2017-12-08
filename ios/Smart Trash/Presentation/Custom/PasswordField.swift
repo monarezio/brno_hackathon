@@ -41,6 +41,7 @@ class PasswordField: TextField {
                 return
             }
         }
+        
         isValid = false
         textField.backgroundColor = UIColor.red.lighter()
     }
