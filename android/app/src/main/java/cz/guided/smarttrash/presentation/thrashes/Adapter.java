@@ -61,8 +61,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
         holder.itemView.setBackgroundColor(position % 2 == 0 ? color1 : color2);
+        System.out.println(trashes.get(position).getMac());
         holder.title.setText(trashes.get(position).getMac());
-        holder.desc.setText(trashes.get(position).getPercentage());
+        System.out.println(trashes.get(position).getPercentage());
+        holder.desc.setText((trashes.get(position).getPercentage()) + "%");
         holder.finished_checkbox.setChecked(trashes.get(position).isFinished());
         holder.itemView.setOnClickListener(v -> {
             if (mListener != null) {
