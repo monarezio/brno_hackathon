@@ -50,14 +50,15 @@ first_reading = take_reading()
 
 def reading_loop():
 	current_reading = take_reading()
-	percentage = (current_reading / first_reading) * 100
+	percentage = 100 - ((current_reading / first_reading) * 100)
 	if percentage < 0:
 		percentage = 0
 	if percentage > 100:
 		percentage = 100
 		
+
 	data = {
-		"type" : "Kos",
+		"type" : "Popcorn",
 		"timestamp" : str(datetime.datetime.now()),
 		"percentage" : str(percentage)
 	}
@@ -65,5 +66,5 @@ def reading_loop():
 	fResult = db.child("reading").child(str(hex(name))).push(data)
 	
 while True:
-	time.sleep(30)
+	time.sleep(3)
 	reading_loop()
