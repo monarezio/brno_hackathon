@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SmartTrash</string>
+    <string name="auth_failed">Your authentication failed.</string>
+</resources>
