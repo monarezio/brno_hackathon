@@ -35,11 +35,26 @@ firebase.database().ref('/reading').once('value').then(snapshot => {
 		return blast.percentage - alast.percentage;
 	});
 
-	const sortedObjects = sorted.map(it => values[it]);
+	let arr = [];
 
-	firebase.database().ref('').set(sortedObjects)
+	// TODO beautify
+
+	for (const a  in sorted){
+
+		const parent = values[sorted[a]];
+
+		const lastItem = parent[Object.keys(parent)[Object.keys(parent).length - 1]];
+
+		arr[sorted[a]] = lastItem
+	}
+
+	firebase.database().ref('/analysis/sorted').set(arr);
 
 	//toto update db db > analysis/sorted/
 
 });
 
+
+/*
+	Analysis #2
+ */
