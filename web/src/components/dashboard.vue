@@ -4,32 +4,32 @@
             <div class="navbar-brand mb-4 mr-0">
                 VAMP
             </div>
-            <ul class="nav flex-column">
+            <ul class="nav nav-pills flex-column">
                 <li class="nav-item">
-                    <a href="#" v-on:click.prevent="show('trash')" class="nav-link text-light">
+                    <a href="#" class="nav-link active text-light">
                         <span class="mr-2"><i class="fas fa-trash"></i></span>
-                        Trashes
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" v-on:click.prevent="show('lightbubs')" class="nav-link text-light">
-                        <span class="mr-2"><i class="fas fa-lightbulb"></i></span>
-                        Lights
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" v-on:click.prevent="logout()" class="nav-link text-danger">
-                        <span class="mr-2"><i class="fas fa-sign-out-alt"></i></span>
-                        Log out
+                        Trash
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link text-light">
-                        <span class="mr-2"><i class="fas fa-car"></i></span>
-                        Traffic
+                        <span class="mr-2"><i class="fas fa-tint"></i></span>
+                        Water
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="#" class="nav-link text-light">
+                        <span class="mr-2"><i class="fas fa-leaf"></i></span>
+                        Polution
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-light">
+                        <span class="mr-2"><i class="fas fa-dollar-sign"></i></span>
+                        Machines
+                    </a>
+                </li>
+                <li class="nav-item mt-4">
                     <a href="#" v-on:click.prevent="logout()" class="nav-link text-danger">
                         <span class="mr-2"><i class="fas fa-sign-out-alt"></i></span>
                         Log out
@@ -76,7 +76,7 @@
 
         .navbar {
             height: 100vh;
-            width: 150px;
+            width: 200px;
         }
 
         .jumbotron {
@@ -92,6 +92,10 @@
                 width: 11px;
                 display: inline-block;
             }
+        }
+
+        .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+            background: rgba(0, 0, 0, 0.4) !important;
         }
 
         .copy {

@@ -1,12 +1,15 @@
-/web/node_modules
+web/node_modules
 
-/server/node_modules
+server/node_modules
 
-/web/.idea
+web/.idea
 
-/android/.idea
+android/.idea
 
-/.idea
+ios/.idea
+
+server/.idea
+
+.idea/
 
 .DS_Store
-.idea/misc.xml
