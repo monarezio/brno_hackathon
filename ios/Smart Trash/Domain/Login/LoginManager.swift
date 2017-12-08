@@ -35,6 +35,7 @@ class LoginManager: LoginProtocol {
         return (user != nil)
     }
     
+    //Dont think its a good idea to return this object, it gives options to presentation layer, that it most definitely shouldnt have
     func getUser() -> User? {
         return user
     }

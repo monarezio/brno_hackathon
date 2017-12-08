@@ -10,6 +10,8 @@ import UIKit
 
 class LoginController: UIViewController {
     
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,11 +23,11 @@ class LoginController: UIViewController {
     }
 
     @IBAction func loginHandler(_ sender: Any) {
-        LoginManager.sharedInstance.login(email: "trash@guided.cz", password: "hesloJeVeslo", success: {
+        /*LoginManager.sharedInstance.login(email: emailField.text!, password:passwordField.text!, success: {
             print("Logged in!")
         }) { (error) in
             print("Error \(error.localizedDescription)")
-        }
+        }*/
     }
     
 }
