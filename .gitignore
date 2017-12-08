@@ -1,5 +1,6 @@
 /web/node_modules
 
-/.idea
+/web/.idea
+
 
 .DS_Store
