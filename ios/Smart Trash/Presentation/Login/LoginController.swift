@@ -10,24 +10,22 @@ import UIKit
 
 class LoginController: UIViewController {
     
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var emailField: EmailField!
+    @IBOutlet weak var passwordField: PasswordField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
+        self.navigationController?.isNavigationBarHidden = true
     }
 
     @IBAction func loginHandler(_ sender: Any) {
-        /*LoginManager.sharedInstance.login(email: emailField.text!, password:passwordField.text!, success: {
-            print("Logged in!")
-        }) { (error) in
-            print("Error \(error.localizedDescription)")
-        }*/
+        if(emailField.isValid && passwordField.isValid) {
+            LoginManager.sharedInstance.login(email: emailField.text!, password:passwordField.text!, success: {
+                print("Logged in!")
+            }) { (error) in
+                print("Error \(error.localizedDescription)")
+            }
+        }
     }
     
 }

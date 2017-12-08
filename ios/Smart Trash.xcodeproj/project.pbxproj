@@ -19,8 +19,9 @@
 		E84F17AA1FDB21CF00CBCC43 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84F17A91FDB21CF00CBCC43 /* MainMenuController.swift */; };
 		E84F17BF1FDB23E100CBCC43 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E84F17B81FDB238200CBCC43 /* Montserrat-Bold.ttf */; };
 		E84F17C01FDB23E400CBCC43 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E84F17AF1FDB237F00CBCC43 /* Montserrat-Regular.ttf */; };
+		E883F5E41FDB3D2300DEC8B3 /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883F5E31FDB3D2300DEC8B3 /* EmailField.swift */; };
+		E883F5E61FDB3F5600DEC8B3 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883F5E51FDB3F5600DEC8B3 /* PasswordField.swift */; };
 		E8C6F6A81FDB34CE00DE1BC8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6F6A71FDB34CE00DE1BC8 /* Extensions.swift */; };
-		E8C6F6AC1FDB398400DE1BC8 /* EmailFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6F6AB1FDB398400DE1BC8 /* EmailFieldDelegate.swift */; };
 		E8EB73631FDB2EB900A203DC /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EB73621FDB2EB900A203DC /* TextField.swift */; };
 		E8EF8DC41FDB32500064494B /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF8DC31FDB32500064494B /* Button.swift */; };
 /* End PBXBuildFile section */
@@ -58,8 +59,9 @@
 		E84F17BC1FDB238400CBCC43 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
 		E84F17BD1FDB238500CBCC43 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
 		E84F17BE1FDB238500CBCC43 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		E883F5E31FDB3D2300DEC8B3 /* EmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
+		E883F5E51FDB3F5600DEC8B3 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
 		E8C6F6A71FDB34CE00DE1BC8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		E8C6F6AB1FDB398400DE1BC8 /* EmailFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailFieldDelegate.swift; sourceTree = "<group>"; };
 		E8EB73621FDB2EB900A203DC /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		E8EF8DC31FDB32500064494B /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		F89D6078E460A3542079A278 /* Pods-Smart Trash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Trash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smart Trash/Pods-Smart Trash.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,7 +133,6 @@
 		E84F179B1FDAE36B00CBCC43 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				E8C6F6AA1FDB396200DE1BC8 /* Custom */,
 				E8C6F6A41FDB347300DE1BC8 /* Common */,
 				E84F17A01FDAE62D00CBCC43 /* Login */,
 			);
@@ -204,6 +205,8 @@
 			children = (
 				E8EF8DC31FDB32500064494B /* Button.swift */,
 				E8EB73621FDB2EB900A203DC /* TextField.swift */,
+				E883F5E31FDB3D2300DEC8B3 /* EmailField.swift */,
+				E883F5E51FDB3F5600DEC8B3 /* PasswordField.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -222,14 +225,6 @@
 				E8C6F6A71FDB34CE00DE1BC8 /* Extensions.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		E8C6F6AA1FDB396200DE1BC8 /* Custom */ = {
-			isa = PBXGroup;
-			children = (
-				E8C6F6AB1FDB398400DE1BC8 /* EmailFieldDelegate.swift */,
-			);
-			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,13 +374,14 @@
 			files = (
 				E8EF8DC41FDB32500064494B /* Button.swift in Sources */,
 				E84F178B1FDAD7AE00CBCC43 /* LoginController.swift in Sources */,
-				E8C6F6AC1FDB398400DE1BC8 /* EmailFieldDelegate.swift in Sources */,
 				E84F17A21FDAE69F00CBCC43 /* LoginProtocol.swift in Sources */,
+				E883F5E61FDB3F5600DEC8B3 /* PasswordField.swift in Sources */,
 				E8C6F6A81FDB34CE00DE1BC8 /* Extensions.swift in Sources */,
 				E84F17891FDAD7AE00CBCC43 /* AppDelegate.swift in Sources */,
 				E8EB73631FDB2EB900A203DC /* TextField.swift in Sources */,
 				E84F17AA1FDB21CF00CBCC43 /* MainMenuController.swift in Sources */,
 				E84F179F1FDAE5FA00CBCC43 /* LoginManager.swift in Sources */,
+				E883F5E41FDB3D2300DEC8B3 /* EmailField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
