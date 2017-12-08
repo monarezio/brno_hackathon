@@ -1,5 +1,7 @@
 /web/node_modules
 
-/.idea
+/web/.idea
+
+/android/.idea
 
 .DS_Store

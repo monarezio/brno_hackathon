@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "104734177472",
+    "firebase_url": "https://smart-trash-78dcb.firebaseio.com",
+    "project_id": "smart-trash-78dcb",
+    "storage_bucket": "smart-trash-78dcb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104734177472:android:5fdfc1c41c6af167",
+        "android_client_info": {
+          "package_name": "cz.guided.smarttrash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "104734177472-6jd84e88a7b5l12k07njon4386ue5iru.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cz.guided.smarttrash",
+            "certificate_hash": "37b2f398d54169ec5557b5ca7c7e326b7db789bc"
+          }
+        },
+        {
+          "client_id": "104734177472-7vn6s1dhcjiobcb0aql6m7u7tvs5cgkn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCJXImtkmmPKymtJUeMEBU7K2Cr_YXnL0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "104734177472-7vn6s1dhcjiobcb0aql6m7u7tvs5cgkn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
