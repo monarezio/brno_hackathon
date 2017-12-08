@@ -8,11 +8,6 @@
 
 
   export default {
-
-    created() {
-      console.log(this.$cookie.get('user'))
-    },
-
     name: 'app',
     data() {
       return {

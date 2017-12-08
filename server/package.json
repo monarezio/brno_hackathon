@@ -1,0 +1,14 @@
+{
+  "name": "hackathoncomputingserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/bin/app.js",
+  "scripts": {
+    "start": "node ./bin/app.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^4.8.0"
+  }
+}

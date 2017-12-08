@@ -1,24 +1,21 @@
-package cz.guided.smarttrash.presentation;
+package cz.guided.smarttrash.presentation.main;
 
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import java.sql.SQLOutput;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cz.guided.smarttrash.R;
+import cz.guided.smarttrash.presentation.thrashes.TrashesActivity;
 import nucleus.factory.RequiresPresenter;
 import nucleus.view.NucleusActivity;
 
@@ -40,9 +37,12 @@ public class MainActivity extends NucleusActivity<MainPresenter> implements Main
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         ButterKnife.bind(this);
         mAuth = FirebaseAuth.getInstance();
-        mAuthListener = firebaseAuth -> {
+        mAuthListener = firebaseAuth ->
+
+        {
             FirebaseUser user = firebaseAuth.getCurrentUser();
             if (user != null) {
                 // User is signed in
@@ -74,8 +74,7 @@ public class MainActivity extends NucleusActivity<MainPresenter> implements Main
         login(emailText.getText().toString(), pwdText.getText().toString());
     }
 
-    @Override
-    public void login(String email, String password) {
+    private void login(String email, String password) {
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     Log.d(TAG, "signInWithEmail:onComplete:" + task.isSuccessful());
@@ -88,8 +87,16 @@ public class MainActivity extends NucleusActivity<MainPresenter> implements Main
                         Toast.makeText(MainActivity.this, R.string.auth_failed,
                                 Toast.LENGTH_SHORT).show();
                     }
-
+                    else if(task.isSuccessful()){
+                        getPresenter().showThrashes();
+                    }
                     // ...
                 });
+    }
+
+    @Override
+    public void goToTrashes() {
+        Intent intent = new Intent(this, TrashesActivity.class);
+        startActivity(intent);
     }
 }
