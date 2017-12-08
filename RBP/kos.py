@@ -5,6 +5,7 @@ import time
 import pyrebase
 import firebase_admin
 from firebase_admin import credentials
+import datetime
 
 config = {
 	"apiKey": "AlzaSyDX19wtQEpULBLgxnisPqN7iFUF8TTvhP0",
@@ -28,24 +29,41 @@ print(str(hex(name)))
 GPIO.setup(TRIG, GPIO.OUT)
 GPIO.setup(ECHO, GPIO.IN)
 
-GPIO.output(TRIG, False)
-time.sleep(2)
-GPIO.output(TRIG, True)
-time.sleep(0.00001)
-GPIO.output(TRIG, False)
+def take_reading():
+	GPIO.output(TRIG, False)
+	time.sleep(2)
+	GPIO.output(TRIG, True)
+	time.sleep(0.00001)
+	GPIO.output(TRIG, False)
 
-while GPIO.input(ECHO)==0:
-	pulse_start = time.time()
+	while GPIO.input(ECHO)==0:
+		pulse_start = time.time()
+		
+	while GPIO.input(ECHO)==1:
+		pulse_end = time.time()
+		
+	pulse_duration = pulse_end - pulse_start
+	return pulse_duration
+time.sleep(3)
+print("ready")
+first_reading = take_reading()
+
+def reading_loop():
+	current_reading = take_reading()
+	percentage = (current_reading / first_reading) * 100
+	if percentage < 0:
+		percentage = 0
+	if percentage > 100:
+		percentage = 100
+		
+	data = {
+		"type" : "Kos",
+		"timestamp" : str(datetime.datetime.now()),
+		"percentage" : str(percentage)
+	}
+
+	fResult = db.child("reading").child(str(hex(name))).push(data)
 	
-while GPIO.input(ECHO)==1:
-	pulse_end = time.time()
-	
-pulse_duration = pulse_end - pulse_start
-print(str(pulse_duration))
-
-data = {
-	"id" : str(hex(name)),
-	"duration": str(pulse_duration)
-}
-
-fResult = db.child("reading").push(data)
+while True:
+	time.sleep(30)
+	reading_loop()
