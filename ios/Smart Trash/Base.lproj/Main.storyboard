@@ -67,7 +67,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                         <real key="value" value="10"/>
@@ -110,7 +110,8 @@
                     <navigationItem key="navigationItem" id="bJp-eL-kLl"/>
                     <connections>
                         <outlet property="emailField" destination="7tT-DH-yRD" id="wfJ-1b-Aq1"/>
-                        <segue destination="7h2-y9-T9P" kind="show" id="jDq-AA-v5s"/>
+                        <outlet property="passwordField" destination="7hs-yj-r99" id="P88-SD-3GQ"/>
+                        <segue destination="7h2-y9-T9P" kind="show" identifier="mainMenu" id="jDq-AA-v5s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
