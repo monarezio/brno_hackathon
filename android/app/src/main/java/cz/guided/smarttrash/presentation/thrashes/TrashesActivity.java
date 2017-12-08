@@ -4,15 +4,26 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.EditText;
+import android.util.Log;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import cz.guided.smarttrash.R;
 import cz.guided.smarttrash.domain.Trash;
+
+import static android.content.ContentValues.TAG;
 
 public class TrashesActivity extends Activity {
 
@@ -41,7 +52,35 @@ public class TrashesActivity extends Activity {
         Trash trash1 = new Trash("AAAAAAAAAAAA", 0, true);
         trashList.add(trash);
         trashList.add(trash1);
+        GetItems();
         mAdapter = new Adapter(trashList, this);
         mRecyclerView.setAdapter(mAdapter);
+    }
+
+    List<Trash> GetItems(){
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference reference = database.getReference();
+
+        reference.addValueEventListener((new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Object value = dataSnapshot.getValue();
+                HashMap<String, Object> hashMap = (HashMap<String, Object>)value;
+                Set set = hashMap.entrySet();
+                Iterator iterator = set.iterator();
+                while(iterator.hasNext()) {
+                    Map.Entry mentry = (Map.Entry)iterator.next();
+                    String uniqueId = (String)mentry.getKey();
+                    Log.d(TAG, uniqueId);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        }));
+
+        return new ArrayList<Trash>();
     }
 }
