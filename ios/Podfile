@@ -10,7 +10,7 @@ target 'Smart Trash' do
   pod 'Firebase/Database'
   pod 'PopupDialog', '~> 0.6'
   pod 'NVActivityIndicatorView'
-  pod 'BEMSimpleLineGraph'
+  pod 'Charts'
 
   # Pods for Smart Trash
 

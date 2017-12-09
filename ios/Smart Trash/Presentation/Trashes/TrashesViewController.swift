@@ -23,6 +23,10 @@ class TrashesViewController: UIViewController, UITableViewDelegate, UITableViewD
         return arr.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "history", sender: arr[indexPath.item].0)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         row.uuidLabel.text = arr[indexPath.item].0
@@ -48,7 +52,7 @@ class TrashesViewController: UIViewController, UITableViewDelegate, UITableViewD
         ref.child("/analysis/sorted").observe(DataEventType.value) { (snapshot) in
             let newData = snapshot.value as? [String : AnyObject] ?? [:]
             
-            print(snapshot)
+            //print(snapshot)
             
             self.arr = []
             
@@ -69,6 +73,13 @@ class TrashesViewController: UIViewController, UITableViewDelegate, UITableViewD
     
         
         navigationController?.navigationBar.tintColor = UIColor.white
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "history") {
+            let trashHistory: TrashHistoryController = segue.destination as! TrashHistoryController
+            trashHistory.uuid = sender as! String
+        }
     }
     
     
