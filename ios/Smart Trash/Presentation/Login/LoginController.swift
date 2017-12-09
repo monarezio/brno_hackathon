@@ -13,8 +13,11 @@ class LoginController: UIViewController {
     
     @IBOutlet weak var emailField: EmailField!
     @IBOutlet weak var passwordField: PasswordField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.performSegue(withIdentifier: "mainMenu", sender: nil)
         
         self.navigationController?.isNavigationBarHidden = true
     }

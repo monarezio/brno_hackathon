@@ -19,11 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        let navigationBarAppearace = UINavigationBar.appearance()
-        //rgb(52, 152, 219)
-        navigationBarAppearace.tintColor = UIColor(red: 52.0, green: 152.0, blue: 219.0, alpha: 1.0)
-        navigationBarAppearace.barTintColor = UIColor(red: 52.0, green: 152.0, blue: 219.0, alpha: 1.0)
-        
         return true
     }
 

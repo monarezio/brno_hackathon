@@ -21,6 +21,10 @@
 		E84F17C01FDB23E400CBCC43 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E84F17AF1FDB237F00CBCC43 /* Montserrat-Regular.ttf */; };
 		E883F5E41FDB3D2300DEC8B3 /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883F5E31FDB3D2300DEC8B3 /* EmailField.swift */; };
 		E883F5E61FDB3F5600DEC8B3 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883F5E51FDB3F5600DEC8B3 /* PasswordField.swift */; };
+		E883F5E91FDB64D000DEC8B3 /* fa-solid-900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E883F5E81FDB64B900DEC8B3 /* fa-solid-900.ttf */; };
+		E883F5ED1FDB6BE100DEC8B3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883F5EC1FDB6BE100DEC8B3 /* CollectionViewCell.swift */; };
+		E883F5F01FDB81E200DEC8B3 /* TrashesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883F5EF1FDB81E200DEC8B3 /* TrashesViewController.swift */; };
+		E883F5F21FDB825B00DEC8B3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883F5F11FDB825B00DEC8B3 /* TableViewCell.swift */; };
 		E8C6F6A81FDB34CE00DE1BC8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6F6A71FDB34CE00DE1BC8 /* Extensions.swift */; };
 		E8EB73631FDB2EB900A203DC /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EB73621FDB2EB900A203DC /* TextField.swift */; };
 		E8EF8DC41FDB32500064494B /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF8DC31FDB32500064494B /* Button.swift */; };
@@ -61,6 +65,10 @@
 		E84F17BE1FDB238500CBCC43 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		E883F5E31FDB3D2300DEC8B3 /* EmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
 		E883F5E51FDB3F5600DEC8B3 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
+		E883F5E81FDB64B900DEC8B3 /* fa-solid-900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-solid-900.ttf"; sourceTree = "<group>"; };
+		E883F5EC1FDB6BE100DEC8B3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		E883F5EF1FDB81E200DEC8B3 /* TrashesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashesViewController.swift; sourceTree = "<group>"; };
+		E883F5F11FDB825B00DEC8B3 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		E8C6F6A71FDB34CE00DE1BC8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E8EB73621FDB2EB900A203DC /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		E8EF8DC31FDB32500064494B /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
@@ -143,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				E84F17C11FDB25B100CBCC43 /* Custom */,
+				E883F5EE1FDB81BF00DEC8B3 /* Trashes */,
 				E84F17A81FDB21B000CBCC43 /* MainMenu */,
 				E84F17A71FDB219900CBCC43 /* Login */,
 			);
@@ -170,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				E84F17A91FDB21CF00CBCC43 /* MainMenuController.swift */,
+				E883F5EC1FDB6BE100DEC8B3 /* CollectionViewCell.swift */,
 			);
 			path = MainMenu;
 			sourceTree = "<group>";
@@ -177,6 +187,7 @@
 		E84F17AB1FDB237600CBCC43 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				E883F5E81FDB64B900DEC8B3 /* fa-solid-900.ttf */,
 				E84F17B01FDB237F00CBCC43 /* Montserrat-Black.ttf */,
 				E84F17B41FDB238100CBCC43 /* Montserrat-BlackItalic.ttf */,
 				E84F17B81FDB238200CBCC43 /* Montserrat-Bold.ttf */,
@@ -209,6 +220,15 @@
 				E883F5E51FDB3F5600DEC8B3 /* PasswordField.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		E883F5EE1FDB81BF00DEC8B3 /* Trashes */ = {
+			isa = PBXGroup;
+			children = (
+				E883F5EF1FDB81E200DEC8B3 /* TrashesViewController.swift */,
+				E883F5F11FDB825B00DEC8B3 /* TableViewCell.swift */,
+			);
+			path = Trashes;
 			sourceTree = "<group>";
 		};
 		E8C6F6A41FDB347300DE1BC8 /* Common */ = {
@@ -298,6 +318,7 @@
 				E84F17A51FDAF8BD00CBCC43 /* GoogleService-Info.plist in Resources */,
 				E84F17901FDAD7AE00CBCC43 /* Assets.xcassets in Resources */,
 				E84F178E1FDAD7AE00CBCC43 /* Main.storyboard in Resources */,
+				E883F5E91FDB64D000DEC8B3 /* fa-solid-900.ttf in Resources */,
 				E84F17BF1FDB23E100CBCC43 /* Montserrat-Bold.ttf in Resources */,
 				E84F17C01FDB23E400CBCC43 /* Montserrat-Regular.ttf in Resources */,
 			);
@@ -350,6 +371,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -358,6 +380,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E883F5F21FDB825B00DEC8B3 /* TableViewCell.swift in Sources */,
 				E8EF8DC41FDB32500064494B /* Button.swift in Sources */,
 				E84F178B1FDAD7AE00CBCC43 /* LoginController.swift in Sources */,
 				E84F17A21FDAE69F00CBCC43 /* LoginProtocol.swift in Sources */,
@@ -379,9 +403,11 @@
 				E8C6F6A81FDB34CE00DE1BC8 /* Extensions.swift in Sources */,
 				E84F17891FDAD7AE00CBCC43 /* AppDelegate.swift in Sources */,
 				E8EB73631FDB2EB900A203DC /* TextField.swift in Sources */,
+				E883F5F01FDB81E200DEC8B3 /* TrashesViewController.swift in Sources */,
 				E84F17AA1FDB21CF00CBCC43 /* MainMenuController.swift in Sources */,
 				E84F179F1FDAE5FA00CBCC43 /* LoginManager.swift in Sources */,
 				E883F5E41FDB3D2300DEC8B3 /* EmailField.swift in Sources */,
+				E883F5ED1FDB6BE100DEC8B3 /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
