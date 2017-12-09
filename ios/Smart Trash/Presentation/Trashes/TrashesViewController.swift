@@ -26,7 +26,18 @@ class TrashesViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         row.uuidLabel.text = arr[indexPath.item].0
-        row.statusLabel.text = arr[indexPath.item].1
+        row.statusLabel.text = "\(arr[indexPath.item].1)%"
+        
+        let status = Int(arr[indexPath.item].1)
+        if(status! > 40 && status! < 60) {
+            row.bacgkroundStatus.backgroundColor = UIColor(red: 100.0 / 255, green: 76.0 / 255, blue: 3.0 / 255, alpha: 0.75)
+        }
+        else if(status! > 50) {
+            row.bacgkroundStatus.backgroundColor = UIColor(red: 16.0 / 255, green: 65.0 / 255, blue: 27.0 / 255, alpha: 0.75)
+        } else {
+            row.bacgkroundStatus.backgroundColor = UIColor(red: 86.0 / 255, green: 21.0 / 255, blue: 27.0 / 255, alpha: 0.75)
+        }
+        
         return row
     }
 
@@ -41,8 +52,9 @@ class TrashesViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             newData.forEach({ i in
                 let a = i.value as! [String: Any]
-                let b = "\(a["percentage"]!)"
-                self.arr.append((i.key, b))
+                let b = Int(Float("\(a["percentage"]!)")!)
+                
+                self.arr.append((i.key, "\(b)"))
             })
             
             self.tableView.reloadData()

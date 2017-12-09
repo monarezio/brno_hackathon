@@ -206,7 +206,7 @@
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="FontAwesome5FreeSolid" family="Font Awesome 5 Free" pointSize="22"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
+                                                            <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.15686274509803921" green="0.65490196078431373" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
@@ -228,7 +228,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="bacgkroundStatus" destination="uEW-oD-QLf" id="gch-5U-8vC"/>
+                                            <outlet property="bacgkroundStatus" destination="uEW-oD-QLf" id="SXj-Dh-trJ"/>
                                             <outlet property="statusLabel" destination="TZ7-R0-ouQ" id="JR3-j8-WVd"/>
                                             <outlet property="uuidLabel" destination="Zsh-SU-QeP" id="tdk-Ca-sdt"/>
                                         </connections>
