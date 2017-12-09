@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34f9da74-273f-42c8-8476-0679619528f7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/bin/app.js" afterPath="$PROJECT_DIR$/server/bin/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/App.vue" afterPath="$PROJECT_DIR$/web/src/App.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/components/dashboard.vue" afterPath="$PROJECT_DIR$/web/src/components/dashboard.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -27,9 +25,11 @@
       <file leaf-file-name="dashboard.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/src/components/dashboard.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="213" column="38" lean-forward="false" selection-start-line="213" selection-start-column="38" selection-end-line="213" selection-end-column="38" />
-              <folding />
+            <state relative-caret-position="401">
+              <caret line="317" column="25" lean-forward="false" selection-start-line="317" selection-start-column="25" selection-end-line="317" selection-end-column="25" />
+              <folding>
+                <element signature="e#4154#5037#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -279,7 +279,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3000000" />
+    <option name="totallyTimeSpent" value="7071000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -380,7 +380,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1245">
           <caret line="83" column="9" lean-forward="false" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
-          <folding />
+          <folding>
+            <element signature="e#4154#5037#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -462,7 +464,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
           <caret line="89" column="25" lean-forward="false" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="e#4154#5037#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -497,7 +501,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
           <caret line="89" column="25" lean-forward="false" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="e#4154#5037#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -562,9 +568,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/src/components/dashboard.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="213" column="38" lean-forward="false" selection-start-line="213" selection-start-column="38" selection-end-line="213" selection-end-column="38" />
-          <folding />
+        <state relative-caret-position="401">
+          <caret line="317" column="25" lean-forward="false" selection-start-line="317" selection-start-column="25" selection-end-line="317" selection-end-column="25" />
+          <folding>
+            <element signature="e#4154#5037#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
