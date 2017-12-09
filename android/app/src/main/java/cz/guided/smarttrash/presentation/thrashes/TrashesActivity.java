@@ -1,11 +1,11 @@
 package cz.guided.smarttrash.presentation.thrashes;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.widget.EditText;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -16,17 +16,17 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import cz.guided.smarttrash.R;
 import cz.guided.smarttrash.domain.Trash;
+import cz.guided.smarttrash.presentation.analytics.AnalyticsActivity;
 
 import static android.content.ContentValues.TAG;
 
 public class TrashesActivity extends Activity {
 
     private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
+    private CustomAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
     private DatabaseReference mDatabase;
@@ -61,12 +61,18 @@ public class TrashesActivity extends Activity {
                 new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot snapshot) {
+                        trashList.clear();
                         for (DataSnapshot child : snapshot.getChildren()) {
-                            Trash tmp = new Trash(child.getKey(), (int) Float.parseFloat(child.child("percentage").getValue().toString()));
+                            String keyControl = child.getKey();
+                            System.out.println(keyControl);
+                            Trash tmp = new Trash(keyControl, (int) Float.parseFloat(child.child("percentage").getValue().toString()));
                             trashList.add(tmp);
-                            mAdapter = new Adapter(trashList, getApplicationContext());
-                            mRecyclerView.setAdapter(mAdapter);
                         }
+                        mAdapter = new CustomAdapter(trashList, getApplicationContext());
+                        mAdapter.setOnClickListener(position -> {
+                            showTrash(mAdapter.getTrashes().get(position).getMac());
+                        });
+                        mRecyclerView.setAdapter(mAdapter);
                     }
 
                     @Override
@@ -75,7 +81,14 @@ public class TrashesActivity extends Activity {
                     }
                 });
 
-        mAdapter = new Adapter(trashList, this);
+        mAdapter = new CustomAdapter(trashList, this);
         mRecyclerView.setAdapter(mAdapter);
+    }
+
+    private void showTrash(String mac) {
+        Intent intent1 = new Intent(this, AnalyticsActivity.class);
+        System.out.println(mac);
+        intent1.putExtra("mac", mac);
+        startActivity(intent1);
     }
 }

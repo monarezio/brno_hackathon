@@ -5,7 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.TextView;
 
 import java.util.List;
@@ -14,7 +13,7 @@ import cz.guided.smarttrash.R;
 import cz.guided.smarttrash.domain.Trash;
 
 
-public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
+public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
     private List<Trash> trashes;
     private RecyclerViewListener mListener = null;
     private int color1;
@@ -36,7 +35,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public Adapter(List<Trash> trashesDataset, Context context) {
+    public CustomAdapter(List<Trash> trashesDataset, Context context) {
         trashes = trashesDataset;
         color1 = context.getResources().getColor(R.color.colorPrimary);
         color2 = context.getResources().getColor(R.color.colorPrimaryDark);
@@ -44,7 +43,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     // Create new views (invoked by the layout manager)
     @Override
-    public Adapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public CustomAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // create a new view
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_item, parent, false);
@@ -76,5 +75,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     public void setOnClickListener(RecyclerViewListener listener) {
         this.mListener = listener;
+    }
+
+    public List<Trash> getTrashes() {
+        return trashes;
     }
 }
