@@ -1,7 +1,7 @@
 <template>
   <section class="homepage">
     <div class="jumbotron container">
-      <img src="../assets/logo.png">
+      <img src="../assets/logo-dark.png">
       <h1>{{ msg }}</h1>
       <a href="/login" class="btn btn-success">Log in</a>
     </div>

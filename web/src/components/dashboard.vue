@@ -2,7 +2,7 @@
     <section class="dashboard">
         <aside class="navbar navbar-dark bg-dark justify-content-start flex-column">
             <div class="navbar-brand mb-4 mr-0">
-                VAMP
+                <img src="../assets/logo.png" alt="Logo">
             </div>
             <ul class="nav nav-pills flex-column">
                 <li class="nav-item">
@@ -81,6 +81,11 @@
 
         .jumbotron {
             margin-top: 10vh;
+        }
+
+        .navbar-brand img{
+            max-width: 100%;
+            max-height: 100%;
         }
 
         .nav-link {
