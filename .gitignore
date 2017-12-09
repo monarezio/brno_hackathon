@@ -1,3 +1,7 @@
+web/node_modules
+
+server/node_modules
+
 web/.idea
 
 android/.idea
