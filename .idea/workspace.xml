@@ -2,7 +2,198 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34f9da74-273f-42c8-8476-0679619528f7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/components/dashboard.vue" afterPath="$PROJECT_DIR$/web/src/components/dashboard.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android/app/src/main/java/cz/guided/smarttrash/presentation/analytics/AnalyticsActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android/app/src/main/java/cz/guided/smarttrash/presentation/menu/MenuActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android/app/src/main/res/layout/activity_analytics.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android/app/src/main/res/layout/activity_menu.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Animation/Animator.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Animation/ChartAnimationEasing.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Charts/BarChartView.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Charts/BarLineChartViewBase.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Charts/BubbleChartView.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Charts/CandleStickChartView.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Charts/ChartViewBase.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Charts/CombinedChartView.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Charts/HorizontalBarChartView.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Charts/LineChartView.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Charts/PieChartView.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Charts/PieRadarChartViewBase.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Charts/RadarChartView.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Charts/ScatterChartView.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Components/AxisBase.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Components/ChartLimitLine.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Components/ComponentBase.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Components/Description.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Components/IMarker.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Components/Legend.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Components/LegendEntry.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Components/MarkerImage.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Components/MarkerView.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Components/XAxis.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Components/YAxis.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/ChartBaseDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/BarChartData.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/BarChartDataEntry.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/BarChartDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/BarLineScatterCandleBubbleChartData.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/BarLineScatterCandleBubbleChartDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/BubbleChartData.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/BubbleChartDataEntry.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/BubbleChartDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/CandleChartData.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/CandleChartDataEntry.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/CandleChartDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/ChartData.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/ChartDataEntry.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/ChartDataEntryBase.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/ChartDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/CombinedChartData.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/LineChartData.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/LineChartDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/LineRadarChartDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/LineScatterCandleRadarChartDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/PieChartData.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/PieChartDataEntry.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/PieChartDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/RadarChartData.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/RadarChartDataEntry.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/RadarChartDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/ScatterChartData.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Implementations/Standard/ScatterChartDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Interfaces/IBarChartDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Interfaces/IBarLineScatterCandleBubbleChartDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Interfaces/IBubbleChartDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Interfaces/ICandleChartDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Interfaces/IChartDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Interfaces/ILineChartDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Interfaces/ILineRadarChartDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Interfaces/ILineScatterCandleRadarChartDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Interfaces/IPieChartDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Interfaces/IRadarChartDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Data/Interfaces/IScatterChartDataSet.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Filters/DataApproximator.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Formatters/DefaultAxisValueFormatter.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Formatters/DefaultFillFormatter.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Formatters/DefaultValueFormatter.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Formatters/IAxisValueFormatter.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Formatters/IFillFormatter.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Formatters/IValueFormatter.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Formatters/IndexAxisValueFormatter.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Highlight/BarHighlighter.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Highlight/ChartHighlighter.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Highlight/CombinedHighlighter.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Highlight/Highlight.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Highlight/HorizontalBarHighlighter.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Highlight/IHighlighter.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Highlight/PieHighlighter.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Highlight/PieRadarHighlighter.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Highlight/RadarHighlighter.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Highlight/Range.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Interfaces/BarChartDataProvider.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Interfaces/BarLineScatterCandleBubbleChartDataProvider.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Interfaces/BubbleChartDataProvider.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Interfaces/CandleChartDataProvider.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Interfaces/ChartDataProvider.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Interfaces/CombinedChartDataProvider.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Interfaces/LineChartDataProvider.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Interfaces/ScatterChartDataProvider.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Jobs/AnimatedMoveViewJob.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Jobs/AnimatedViewPortJob.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Jobs/AnimatedZoomViewJob.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Jobs/MoveViewJob.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Jobs/ViewPortJob.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Jobs/ZoomViewJob.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/AxisRendererBase.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/BarChartRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/BarLineScatterCandleBubbleRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/BubbleChartRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/CandleStickChartRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/ChartDataRendererBase.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/CombinedChartRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/HorizontalBarChartRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/LegendRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/LineChartRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/LineRadarRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/LineScatterCandleRadarRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/PieChartRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/RadarChartRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/Renderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/Scatter/ChevronDownShapeRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/Scatter/ChevronUpShapeRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/Scatter/CircleShapeRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/Scatter/CrossShapeRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/Scatter/IShapeRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/Scatter/SquareShapeRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/Scatter/TriangleShapeRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/Scatter/XShapeRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/ScatterChartRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/XAxisRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/XAxisRendererHorizontalBarChart.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/XAxisRendererRadarChart.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/YAxisRenderer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/YAxisRendererHorizontalBarChart.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Renderers/YAxisRendererRadarChart.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Utils/ChartColorTemplates.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Utils/ChartUtils.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Utils/Fill.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Utils/Platform.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Utils/Transformer.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Utils/TransformerHorizontalBarChart.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Charts/Source/Charts/Utils/ViewPortHandler.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Charts/Charts-dummy.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Charts/Charts-umbrella.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Charts/Charts.modulemap" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Smart Trash/Presentation/History/TrashHistoryController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/Smart Trash/Smart Trash-Bridging-Header.h" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ios/Pods/BEMSimpleLineGraph/Classes/BEMAverageLine.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ios/Pods/BEMSimpleLineGraph/Classes/BEMAverageLine.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ios/Pods/BEMSimpleLineGraph/Classes/BEMCircle.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ios/Pods/BEMSimpleLineGraph/Classes/BEMCircle.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ios/Pods/BEMSimpleLineGraph/Classes/BEMLine.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ios/Pods/BEMSimpleLineGraph/Classes/BEMLine.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ios/Pods/BEMSimpleLineGraph/Classes/BEMPermanentPopupView.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ios/Pods/BEMSimpleLineGraph/Classes/BEMPermanentPopupView.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ios/Pods/BEMSimpleLineGraph/Classes/BEMSimpleLineGraphView.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ios/Pods/BEMSimpleLineGraph/Classes/BEMSimpleLineGraphView.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ios/Pods/BEMSimpleLineGraph/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ios/Pods/BEMSimpleLineGraph/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/BEMSimpleLineGraph/BEMSimpleLineGraph-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/BEMSimpleLineGraph/BEMSimpleLineGraph-umbrella.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/BEMSimpleLineGraph/BEMSimpleLineGraph.modulemap" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/xcuserdata/monarezio.xcuserdatad/xcschemes/BEMSimpleLineGraph.xcscheme" afterPath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/xcuserdata/monarezio.xcuserdatad/xcschemes/Charts.xcscheme" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/BEMSimpleLineGraph/BEMSimpleLineGraph-prefix.pch" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Charts/Charts-prefix.pch" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/BEMSimpleLineGraph/BEMSimpleLineGraph.xcconfig" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Charts/Charts.xcconfig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/BEMSimpleLineGraph/Info.plist" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Charts/Info.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/Smart Trash.xcworkspace/xcuserdata/monarezio.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/ios/Smart Trash.xcworkspace/xcuserdata/monarezio.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/app/build.gradle" afterPath="$PROJECT_DIR$/android/app/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/app/google-services.json" afterPath="$PROJECT_DIR$/android/app/google-services.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/app/src/main/java/cz/guided/smarttrash/domain/Trash.java" afterPath="$PROJECT_DIR$/android/app/src/main/java/cz/guided/smarttrash/domain/Trash.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/app/src/main/java/cz/guided/smarttrash/presentation/main/MainActivity.java" afterPath="$PROJECT_DIR$/android/app/src/main/java/cz/guided/smarttrash/presentation/main/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/app/src/main/java/cz/guided/smarttrash/presentation/main/MainPresenter.java" afterPath="$PROJECT_DIR$/android/app/src/main/java/cz/guided/smarttrash/presentation/main/MainPresenter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/app/src/main/java/cz/guided/smarttrash/presentation/main/MainView.java" afterPath="$PROJECT_DIR$/android/app/src/main/java/cz/guided/smarttrash/presentation/main/MainView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/app/src/main/java/cz/guided/smarttrash/presentation/thrashes/Adapter.java" afterPath="$PROJECT_DIR$/android/app/src/main/java/cz/guided/smarttrash/presentation/thrashes/Adapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/app/src/main/java/cz/guided/smarttrash/presentation/thrashes/TrashesActivity.java" afterPath="$PROJECT_DIR$/android/app/src/main/java/cz/guided/smarttrash/presentation/thrashes/TrashesActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/android/app/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/app/src/main/res/layout/list_item.xml" afterPath="$PROJECT_DIR$/android/app/src/main/res/layout/list_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build.gradle" afterPath="$PROJECT_DIR$/android/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/Podfile" afterPath="$PROJECT_DIR$/ios/Podfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/Podfile.lock" afterPath="$PROJECT_DIR$/ios/Podfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/Pods/Manifest.lock" afterPath="$PROJECT_DIR$/ios/Pods/Manifest.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/xcuserdata/monarezio.xcuserdatad/xcschemes/Pods-Smart Trash.xcscheme" afterPath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/xcuserdata/monarezio.xcuserdatad/xcschemes/Pods-Smart Trash.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/xcuserdata/monarezio.xcuserdatad/xcschemes/PopupDialog.xcscheme" afterPath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/xcuserdata/monarezio.xcuserdatad/xcschemes/PopupDialog.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/xcuserdata/monarezio.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/xcuserdata/monarezio.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Smart Trash/Pods-Smart Trash-acknowledgements.markdown" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Smart Trash/Pods-Smart Trash-acknowledgements.markdown" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Smart Trash/Pods-Smart Trash-acknowledgements.plist" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Smart Trash/Pods-Smart Trash-acknowledgements.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Smart Trash/Pods-Smart Trash-frameworks.sh" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Smart Trash/Pods-Smart Trash-frameworks.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Smart Trash/Pods-Smart Trash.debug.xcconfig" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Smart Trash/Pods-Smart Trash.debug.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Smart Trash/Pods-Smart Trash.release.xcconfig" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Smart Trash/Pods-Smart Trash.release.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/Smart Trash.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/ios/Smart Trash.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/Smart Trash/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/ios/Smart Trash/Base.lproj/Main.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/Smart Trash/Presentation/Trashes/TrashesViewController.swift" afterPath="$PROJECT_DIR$/ios/Smart Trash/Presentation/Trashes/TrashesViewController.swift" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,7 +213,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="dashboard.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dashboard.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/src/components/dashboard.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="401">
@@ -44,10 +235,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/bin/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
+            <state relative-caret-position="3">
               <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
               <folding />
             </state>
@@ -279,11 +470,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7071000" />
+    <option name="totallyTimeSpent" value="7516000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24225576" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -291,7 +481,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.303989" sideWeight="0.49722" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.303989" sideWeight="0.49722" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -558,14 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/bin/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/src/components/dashboard.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="401">
@@ -573,6 +755,14 @@
           <folding>
             <element signature="e#4154#5037#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/bin/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3">
+          <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>

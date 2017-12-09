@@ -27,13 +27,11 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         // each data item is just a string in this case
         public TextView title;
         public TextView desc;
-        public CheckBox finished_checkbox;
 
         public ViewHolder(View v) {
             super(v);
             desc = (TextView) itemView.findViewById(R.id.desc);
             title = (TextView) itemView.findViewById(R.id.title);
-            finished_checkbox = (CheckBox) itemView.findViewById(R.id.checkBox_finished);
         }
     }
 
@@ -61,11 +59,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
         holder.itemView.setBackgroundColor(position % 2 == 0 ? color1 : color2);
-        System.out.println(trashes.get(position).getMac());
         holder.title.setText(trashes.get(position).getMac());
-        System.out.println(trashes.get(position).getPercentage());
         holder.desc.setText((trashes.get(position).getPercentage()) + "%");
-        holder.finished_checkbox.setChecked(trashes.get(position).isFinished());
         holder.itemView.setOnClickListener(v -> {
             if (mListener != null) {
                 mListener.OnClickListener(position);

@@ -15,14 +15,6 @@
       },
       "oauth_client": [
         {
-          "client_id": "104734177472-qcgv307ndp4uvf0u3uoa7hjnr9vgb78l.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "cz.guided.smarttrash",
-            "certificate_hash": "c51090646a9364ef97e41ed25d5aac80c095213a"
-          }
-        },
-        {
           "client_id": "104734177472-6jd84e88a7b5l12k07njon4386ue5iru.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -47,13 +39,6 @@
         "appinvite_service": {
           "status": 2,
           "other_platform_oauth_client": [
-            {
-              "client_id": "104734177472-9prnvtbnka67b6ftltgav3o9386h6ha4.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "cz.guided.Smart-Trash"
-              }
-            },
             {
               "client_id": "104734177472-7vn6s1dhcjiobcb0aql6m7u7tvs5cgkn.apps.googleusercontent.com",
               "client_type": 3

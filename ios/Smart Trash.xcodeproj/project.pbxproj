@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04BDC312496FF4D61D82B4EF /* Pods_Smart_Trash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2991BC848FE74741BC3B12 /* Pods_Smart_Trash.framework */; };
+		E847BC5B1FDBD4AA00692B1C /* TrashHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E847BC5A1FDBD4AA00692B1C /* TrashHistoryController.swift */; };
 		E84F17891FDAD7AE00CBCC43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84F17881FDAD7AE00CBCC43 /* AppDelegate.swift */; };
 		E84F178B1FDAD7AE00CBCC43 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84F178A1FDAD7AE00CBCC43 /* LoginController.swift */; };
 		E84F178E1FDAD7AE00CBCC43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84F178C1FDAD7AE00CBCC43 /* Main.storyboard */; };
@@ -33,6 +34,8 @@
 /* Begin PBXFileReference section */
 		2265EB2B2324AA5EF1618F88 /* Pods-Smart Trash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Trash.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smart Trash/Pods-Smart Trash.release.xcconfig"; sourceTree = "<group>"; };
 		5E2991BC848FE74741BC3B12 /* Pods_Smart_Trash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Trash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E847BC561FDBD32600692B1C /* Smart Trash-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smart Trash-Bridging-Header.h"; sourceTree = "<group>"; };
+		E847BC5A1FDBD4AA00692B1C /* TrashHistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashHistoryController.swift; sourceTree = "<group>"; };
 		E84F17851FDAD7AE00CBCC43 /* Smart Trash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Trash.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E84F17881FDAD7AE00CBCC43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E84F178A1FDAD7AE00CBCC43 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -104,6 +107,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E847BC591FDBD48F00692B1C /* History */ = {
+			isa = PBXGroup;
+			children = (
+				E847BC5A1FDBD4AA00692B1C /* TrashHistoryController.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
 		E84F177C1FDAD7AE00CBCC43 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +145,7 @@
 				E84F17911FDAD7AE00CBCC43 /* LaunchScreen.storyboard */,
 				E84F17A41FDAF8BD00CBCC43 /* GoogleService-Info.plist */,
 				E84F17941FDAD7AE00CBCC43 /* Info.plist */,
+				E847BC561FDBD32600692B1C /* Smart Trash-Bridging-Header.h */,
 			);
 			path = "Smart Trash";
 			sourceTree = "<group>";
@@ -150,6 +162,7 @@
 		E84F179C1FDAE37F00CBCC43 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E847BC591FDBD48F00692B1C /* History */,
 				E84F17C11FDB25B100CBCC43 /* Custom */,
 				E883F5EE1FDB81BF00DEC8B3 /* Trashes */,
 				E84F17A81FDB21B000CBCC43 /* MainMenu */,
@@ -282,6 +295,7 @@
 				TargetAttributes = {
 					E84F17841FDAD7AE00CBCC43 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -367,7 +381,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Smart Trash/Pods-Smart Trash-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BEMSimpleLineGraph/BEMSimpleLineGraph.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
@@ -377,7 +391,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMSimpleLineGraph.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
@@ -398,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E883F5F21FDB825B00DEC8B3 /* TableViewCell.swift in Sources */,
+				E847BC5B1FDBD4AA00692B1C /* TrashHistoryController.swift in Sources */,
 				E8EF8DC41FDB32500064494B /* Button.swift in Sources */,
 				E84F178B1FDAD7AE00CBCC43 /* LoginController.swift in Sources */,
 				E84F17A21FDAE69F00CBCC43 /* LoginProtocol.swift in Sources */,
@@ -547,6 +562,7 @@
 			baseConfigurationReference = F89D6078E460A3542079A278 /* Pods-Smart Trash.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BXZCQ7UNDX;
 				INFOPLIST_FILE = "Smart Trash/Info.plist";
@@ -554,6 +570,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.guided.Smart-Trash";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Smart Trash/Smart Trash-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -564,6 +582,7 @@
 			baseConfigurationReference = 2265EB2B2324AA5EF1618F88 /* Pods-Smart Trash.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BXZCQ7UNDX;
 				INFOPLIST_FILE = "Smart Trash/Info.plist";
@@ -571,6 +590,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.guided.Smart-Trash";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Smart Trash/Smart Trash-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
