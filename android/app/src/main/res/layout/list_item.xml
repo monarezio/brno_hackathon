@@ -27,15 +27,4 @@
         android:paddingBottom="18dp"
         android:text="TextView" />
 
-    <CheckBox
-        android:id="@+id/checkBox_finished"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginEnd="18dp"
-        android:layout_marginRight="18dp"
-        android:clickable="false" />
-
 </RelativeLayout>

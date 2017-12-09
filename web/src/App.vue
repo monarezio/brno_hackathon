@@ -26,4 +26,10 @@
       height: 100%;
     }
   }
+
+  .btn{
+    font-size: 11px !important;
+    text-transform: uppercase;
+    font-weight: bold !important;
+  }
 </style>
