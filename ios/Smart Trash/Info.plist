@@ -36,6 +36,7 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
+		<string>fa-solid-900.ttf</string>
 		<string>Montserrat-Bold.ttf</string>
 		<string>Montserrat-Regular.ttf</string>
 	</array>
