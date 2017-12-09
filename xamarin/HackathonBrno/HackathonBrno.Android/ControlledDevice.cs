@@ -44,7 +44,7 @@ namespace HackathonBrno.Droid
         }
 
         public string uniqueId;
-        public List<Reading> readings;
+        public List<Reading> readings = new List<Reading>();
 
         public Reading LatestReading()
         {

@@ -16,17 +16,22 @@ using System.Net;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Android.Graphics;
 
 namespace HackathonBrno.Droid
 {
     [Activity(Label = "SortLayout")]
     public class SortLayout : Activity
     {
-        ListView listSort;
+        public LinearLayout linearSort;
+        public float threshold = 50;
         List<ControlledDevice> controlledDevices = new List<ControlledDevice>();
+
+        Color red = new Color(237, 26, 40);
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            this.SetContentView(Resource.Layout.SortLayout);
             GetFirebaseData();
             CreateList();
         }
@@ -63,16 +68,66 @@ namespace HackathonBrno.Droid
 
         void CreateList()
         {
-            listSort = FindViewById<ListView>(Resource.Id.listSort);
+            controlledDevices.Sort((a, b) => b.LatestReading().percentage - a.LatestReading().percentage);
+            linearSort = FindViewById<LinearLayout>(Resource.Id.linearSort);
             foreach(ControlledDevice controlledDevice in controlledDevices)
             {
-                 
+                LinearLayout deviceHorizontal = new LinearLayout(this)
+                {
+                    Orientation = Orientation.Horizontal
+                };
+                LinearLayout deviceVertical = new LinearLayout(this)
+                {
+                    Orientation = Orientation.Vertical
+                };
+                deviceVertical.SetPadding(30, 20, 30, 20);
+                deviceVertical.Click += OnClickDevice;
+                deviceVertical.Tag = controlledDevice.uniqueId;
+                //Device Name
+                TextView deviceName = new TextView(this){
+                    TextSize = 24,
+                    Text = controlledDevice.uniqueId
+                };
+
+                deviceVertical.AddView(deviceName);
+
+                //Latest Percentage
+                int percent = controlledDevice.LatestReading().percentage;
+                TextView latestPercentage = new TextView(this)
+                {
+                    TextSize = 30,
+                    TextAlignment = TextAlignment.ViewEnd,
+                    Text = percent.ToString()
+                };
+
+                if(percent < threshold)
+                {
+                    deviceName.SetTextColor(red);
+                    latestPercentage.SetTextColor(red);
+                }
+
+                //Last Update
+                TextView lastUpdate = new TextView(this)
+                {
+                    Text = controlledDevice.LatestReading().timestamp.ToString()
+                };
+
+                deviceVertical.AddView(lastUpdate);
+
+                deviceHorizontal.AddView(deviceVertical);
+                deviceHorizontal.AddView(latestPercentage);
+
+                linearSort.AddView(deviceHorizontal);
             }
         }
 
-        class ReadingResponse
+        void OnClickDevice(object a, EventArgs b)
         {
-            List<ControlledDevice> devices = new List<ControlledDevice>();
+            LinearLayout linearLayout = (LinearLayout)a;
+            string uniqueId = linearLayout.Tag.ToString();
+            ControlledDevice device = controlledDevices.Find(x => x.uniqueId == uniqueId);
+
+            Console.WriteLine(device);
         }
     }
 }
