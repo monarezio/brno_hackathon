@@ -177,10 +177,10 @@
             </objects>
             <point key="canvasLocation" x="1360.8" y="131.78410794602701"/>
         </scene>
-        <!--Trashes View Controller-->
+        <!--Trashes-->
         <scene sceneID="BC5-Wb-0co">
             <objects>
-                <viewController id="le3-om-YGP" customClass="TrashesViewController" customModule="Smart_Trash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Trashes" id="le3-om-YGP" customClass="TrashesViewController" customModule="Smart_Trash" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="icM-cp-cad">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,7 +206,7 @@
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="FontAwesome5FreeSolid" family="Font Awesome 5 Free" pointSize="22"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
+                                                            <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.15686274509803921" green="0.65490196078431373" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
@@ -228,7 +228,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="bacgkroundStatus" destination="uEW-oD-QLf" id="gch-5U-8vC"/>
+                                            <outlet property="bacgkroundStatus" destination="uEW-oD-QLf" id="SXj-Dh-trJ"/>
                                             <outlet property="statusLabel" destination="TZ7-R0-ouQ" id="JR3-j8-WVd"/>
                                             <outlet property="uuidLabel" destination="Zsh-SU-QeP" id="tdk-Ca-sdt"/>
                                         </connections>
@@ -245,11 +245,27 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="m8j-aJ-jO7" id="3hY-Bt-JHr"/>
+                        <segue destination="Fqh-Oa-xgp" kind="show" id="yqi-2B-c4u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLL-aI-1nR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2397.5999999999999" y="131.78410794602701"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="07Z-O1-gkd">
+            <objects>
+                <viewController id="Fqh-Oa-xgp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ujg-ev-UDs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="dVT-Rd-uhn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kj6-47-qUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3367" y="132"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bTL-3Y-QvN">

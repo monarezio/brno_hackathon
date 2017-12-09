@@ -4,5 +4,6 @@
     <SelectedDevice>Xiaomi Mi A1</SelectedDevice>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
     <DefaultDevice>Asado</DefaultDevice>
+    <AndroidDesignerPreferredTheme>Theme.DeviceDefault.Light</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>
