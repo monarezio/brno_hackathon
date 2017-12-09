@@ -41,30 +41,80 @@
             </p>
         </aside>
 
-        <section class="content">
+        <section class="content col">
+            <section class="info row justify-content-center" v-show="data">
+                <div class="col-4 list__item" v-for="item in data">
+                    <div class="row">
+                        <div class="icon" v-bind:class="item.clas">
+                            <i class="fas fa-trash"></i>
+                        </div>
+                        <div class="desc">
+                            <p class="text-muted">{{ item.name }}</p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="overlay"></div>
+
+                <button class="btn btn-dark mt-2">Load more</button>
+            </section>
         </section>
     </section>
 </template>
 
 <script>
 
+    /*
+        Default data
+     */
+	let data1 = [];
+
+    import Firebase from 'firebase'
+
+    Firebase.initializeApp({
+		apiKey: "AIzaSyDX19wtQEpULBLgxnisPqN7iFUF8TTvhP0",
+		authDomain: "smart-trash-78dcb.firebaseapp.com",
+		databaseURL: "https://smart-trash-78dcb.firebaseio.com",
+		projectId: "smart-trash-78dcb",
+		storageBucket: "smart-trash-78dcb.appspot.com",
+		messagingSenderId: "104734177472"
+	});
+
+	Firebase.database().ref('/analysis/sorted').once('value').then(snapshot => {
+		const values = snapshot.val();
+
+        for(let x in values) {
+
+        	const temp = {
+        		percentage: values[x].percentage,
+                type: values[x].type,
+                timestamp: values[x].timestamp,
+                name: x,
+				clas: values[x].percentage < 50 ? "okay" : values[x].percentage > 80 ? "danger" : "warn"
+            };
+
+        	data1.push(temp);
+        }
+
+	});
+
 	export default {
 
-		created(){
-		    if(!this.$cookie.get('user')) this.$router.push('/')
-        },
+		created() {
+			if (!this.$cookie.get('user')) this.$router.push('/')
+		},
 		data() {
 			return {
-				username: ''
+				username: '',
+				data: data1
 			}
 		},
 		methods: {
-            logout(){
-                this.$cookie.delete('user');
-                this.$router.push('/');
-            }
-        }
+			logout() {
+				this.$cookie.delete('user');
+				this.$router.push('/');
+			}
+		}
 	}
 </script>
 
@@ -83,7 +133,7 @@
             margin-top: 10vh;
         }
 
-        .navbar-brand img{
+        .navbar-brand img {
             max-width: 100%;
             max-height: 100%;
         }
@@ -99,7 +149,7 @@
             }
         }
 
-        .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+        .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
             background: rgba(0, 0, 0, 0.4) !important;
         }
 
@@ -112,8 +162,60 @@
         /*
             Tables, charts
          */
-        .content{
+        .content {
+            margin-top: 10vh;
+            padding: 0 10vh;
 
+            p{
+                margin-bottom: 0;
+            }
+
+            > .row {
+                margin: 0;
+                position: relative;
+            }
+
+            .btn.btn-dark {
+                position: relative;
+                z-index: 1000;
+            }
+
+            .list__item {
+                padding: 5px;
+
+                .row {
+                    margin: 0;
+                    border-radius: 3px;
+                }
+
+                .desc {
+                    flex: 1 1 auto;
+                    background: #efefef;
+                    padding: .5em;
+                }
+
+                .icon {
+                    min-width: 50px;
+                    min-height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #ffffff;
+                    background: #28a745;
+
+                    &.okay {
+                        background: #28a745;
+                    }
+
+                    &.warn {
+                        background: #ffc107;
+                    }
+
+                    &.danger {
+                        background: #dc3545;
+                    }
+                }
+            }
         }
 
     }
