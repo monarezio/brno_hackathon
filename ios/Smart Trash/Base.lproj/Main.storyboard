@@ -245,27 +245,42 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="m8j-aJ-jO7" id="3hY-Bt-JHr"/>
-                        <segue destination="Fqh-Oa-xgp" kind="show" id="yqi-2B-c4u"/>
+                        <segue destination="Fqh-Oa-xgp" kind="show" identifier="history" id="yqi-2B-c4u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLL-aI-1nR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2397.5999999999999" y="131.78410794602701"/>
         </scene>
-        <!--View Controller-->
+        <!--Trash History Controller-->
         <scene sceneID="07Z-O1-gkd">
             <objects>
-                <viewController id="Fqh-Oa-xgp" sceneMemberID="viewController">
+                <viewController id="Fqh-Oa-xgp" customClass="TrashHistoryController" customModule="Smart_Trash" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ujg-ev-UDs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQ6-44-IKp" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MQ6-44-IKp" firstAttribute="leading" secondItem="dVT-Rd-uhn" secondAttribute="leading" id="D8B-X6-kTE"/>
+                            <constraint firstItem="MQ6-44-IKp" firstAttribute="trailing" secondItem="dVT-Rd-uhn" secondAttribute="trailing" id="KBZ-Zh-O1g"/>
+                            <constraint firstItem="MQ6-44-IKp" firstAttribute="top" secondItem="dVT-Rd-uhn" secondAttribute="top" id="M6m-cE-FD6"/>
+                            <constraint firstItem="MQ6-44-IKp" firstAttribute="bottom" secondItem="dVT-Rd-uhn" secondAttribute="bottom" id="gJ5-Gz-vSX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dVT-Rd-uhn"/>
                     </view>
+                    <connections>
+                        <outlet property="chartView" destination="MQ6-44-IKp" id="teU-YN-iQc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kj6-47-qUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3367" y="132"/>
+            <point key="canvasLocation" x="3365.5999999999999" y="131.78410794602701"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bTL-3Y-QvN">
