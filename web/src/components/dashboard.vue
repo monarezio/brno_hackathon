@@ -42,23 +42,23 @@
         </aside>
 
         <section class="content col d-flex flex-column align-items-center">
-            <section class="info row" v-show="data">
-                <div class="col-4 list__item" v-for="item in data">
+            <h1 class="display-1">{{ username }}</h1>
+            <section class="info row">
+                <h2 class="display-3" v-show="loading">Loading...</h2>
+                <div class="col-6 list__item" v-for="item in data">
                     <div class="row">
                         <div class="icon" v-bind:class="item.clas">
                             <i class="fas fa-trash"></i>
                         </div>
-                        <div class="desc">
-                            <p class="text-muted">{{ item.name }}</p>
+                        <div class="desc small">
+                            <p class="text-dark">{{ item.name }}</p>
+                            <p class="text-muted">{{Math.floor(item.percentage)}}%</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="overlay"></div>
             </section>
-
-
-            <button class="btn btn-dark mt-2">Load more</button>
 
             <!--<canvas id="chart" width="600" height="400"></canvas>-->
         </section>
@@ -70,7 +70,6 @@
     /*
         Default data
      */
-	let data1 = [];
 
     import Firebase from 'firebase'
 
@@ -83,23 +82,32 @@
 		messagingSenderId: "104734177472"
 	});
 
-	Firebase.database().ref('/analysis/sorted').once('value').then(snapshot => {
+    const dataRef = Firebase.database().ref('/analysis/sorted');
+
+	let data1 = [];
+
+	function parseFirebase(snapshot, vue) {
+        let arr = [];
+
 		const values = snapshot.val();
 
-        for(let x in values) {
+		for(let x in values) {
 
-        	const temp = {
-        		percentage: values[x].percentage,
-                type: values[x].type,
-                timestamp: values[x].timestamp,
-                name: x,
-				clas: values[x].percentage < 50 ? "okay" : values[x].percentage > 80 ? "danger" : "warn"
-            };
+			const temp = {
+				percentage: values[x].percentage,
+				type: values[x].type,
+				timestamp: values[x].timestamp,
+				name: x,
+				clas: values[x].percentage > 50 ? "okay" : values[x].percentage < 20 ? "danger" : "warn"
+			};
 
-        	data1.push(temp);
-        }
+			arr.push(temp);
+		}
 
-	});
+		vue.loading = false;
+
+		return arr;
+	}
 
 	export default {
 
@@ -109,9 +117,17 @@
 		data() {
 			return {
 				username: '',
-				data: data1
+                data: [],
+                loading: true
 			}
 		},
+        mounted(){
+
+			let _this = this;
+			dataRef.on('value', snapshot => {
+				this.data = parseFirebase(snapshot, _this)
+			})
+        },
 		methods: {
 			logout() {
 				this.$cookie.delete('user');
@@ -195,6 +211,7 @@
                     flex: 1 1 auto;
                     background: #efefef;
                     padding: .5em;
+                    font-weight: bold;
                 }
 
                 .icon {
