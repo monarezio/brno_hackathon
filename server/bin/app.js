@@ -21,7 +21,10 @@ const conn = firebase.initializeApp({
 /*
 	Analysis #1
  */
-firebase.database().ref('/reading').once('value').then(snapshot => {
+const dataRef = firebase.database().ref('/reading');
+
+dataRef.on('value', snapshot => {
+	console.log('Data processing');
 	const values = snapshot.val();
 	const ids = Object.keys(values);
 
