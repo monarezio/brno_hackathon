@@ -1,0 +1,8 @@
+HackathonBrno.Droid.MainActivity, HackathonBrno.Android;md51627e2c983fc43103b32c174c43a234a.MainActivity
+HackathonBrno.Droid.MainActivity, HackathonBrno.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md51627e2c983fc43103b32c174c43a234a.MainActivity
+HackathonBrno.Droid.MainActivity;md51627e2c983fc43103b32c174c43a234a.MainActivity
+hackathonbrno.droid.MainActivity;md51627e2c983fc43103b32c174c43a234a.MainActivity
+HackathonBrno.Droid.SortLayout, HackathonBrno.Android;md51627e2c983fc43103b32c174c43a234a.SortLayout
+HackathonBrno.Droid.SortLayout, HackathonBrno.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md51627e2c983fc43103b32c174c43a234a.SortLayout
+HackathonBrno.Droid.SortLayout;md51627e2c983fc43103b32c174c43a234a.SortLayout
+hackathonbrno.droid.SortLayout;md51627e2c983fc43103b32c174c43a234a.SortLayout

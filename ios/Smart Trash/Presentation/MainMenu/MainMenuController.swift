@@ -7,29 +7,38 @@
 //
 
 import UIKit
+import Darwin
 
-class MainMenuController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+class MainMenuController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    let typeOfAnalysis = [("", "Trash"), ("", "Water"),  ("", "Polution"), ("", "Machines")]
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return typeOfAnalysis.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // get a reference to our storyboard cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath as IndexPath) as! CollectionViewCell
+        
+        // Use the outlet in our custom class to get a reference to the UILabel in the cell
+        cell.icon.text = typeOfAnalysis[indexPath.item].0
+        cell.text.text = typeOfAnalysis[indexPath.item].1
+        
+        return cell
     }
-    */
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if(typeOfAnalysis[indexPath.item].1 == "Trash") {
+            performSegue(withIdentifier: "listCells", sender: nil)
+        }
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationItem.hidesBackButton = true
+    }
 
 }

@@ -15,6 +15,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cz.guided.smarttrash.R;
+import cz.guided.smarttrash.presentation.menu.MenuActivity;
 import cz.guided.smarttrash.presentation.thrashes.TrashesActivity;
 import nucleus.factory.RequiresPresenter;
 import nucleus.view.NucleusActivity;
@@ -86,8 +87,7 @@ public class MainActivity extends NucleusActivity<MainPresenter> implements Main
                         Log.w(TAG, "signInWithEmail:failed", task.getException());
                         Toast.makeText(MainActivity.this, R.string.auth_failed,
                                 Toast.LENGTH_SHORT).show();
-                    }
-                    else if(task.isSuccessful()){
+                    } else if (task.isSuccessful()) {
                         getPresenter().showThrashes();
                     }
                     // ...
@@ -95,8 +95,8 @@ public class MainActivity extends NucleusActivity<MainPresenter> implements Main
     }
 
     @Override
-    public void goToTrashes() {
-        Intent intent = new Intent(this, TrashesActivity.class);
+    public void goToMenu() {
+        Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);
     }
 }

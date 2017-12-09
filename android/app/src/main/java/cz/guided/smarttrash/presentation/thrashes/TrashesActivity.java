@@ -57,13 +57,11 @@ public class TrashesActivity extends Activity {
 
         DatabaseReference sortedStuff = mDatabase.child("analysis").child("sorted");
 
-        sortedStuff.addListenerForSingleValueEvent(
+        sortedStuff.addValueEventListener(
                 new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot snapshot) {
                         for (DataSnapshot child : snapshot.getChildren()) {
-                            System.out.println(child.getKey());
-                            System.out.println((int) Float.parseFloat(child.child("percentage").getValue().toString()));
                             Trash tmp = new Trash(child.getKey(), (int) Float.parseFloat(child.child("percentage").getValue().toString()));
                             trashList.add(tmp);
                             mAdapter = new Adapter(trashList, getApplicationContext());
