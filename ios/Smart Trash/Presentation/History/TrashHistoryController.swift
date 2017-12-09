@@ -26,7 +26,7 @@ class TrashHistoryController: UIViewController, ChartViewDelegate {
         chartView.delegate = self
         
         chartView.backgroundColor = .white
-        chartView.gridBackgroundColor = UIColor(red: 51/255, green: 181/255, blue: 229/255, alpha: 150/255)
+        chartView.gridBackgroundColor = UIColor.white
         chartView.drawGridBackgroundEnabled = true
         
         chartView.drawBordersEnabled = true
@@ -48,28 +48,52 @@ class TrashHistoryController: UIViewController, ChartViewDelegate {
         
         if let uuid = self.uuid {
             let ref = Database.database().reference()
-            ref.child("reading/\(uuid)").queryOrdered(byChild: "timestamp").queryLimited(toLast: 10).observe(DataEventType.value, with: { (snapshot) in
+            ref.child("reading/\(uuid)")
+                .observe(DataEventType.value, with: { (snapshot) in
                 
-                print("\(snapshot.value)")
                 
-                //updateChart()
+                
+                let almostData = snapshot.value as! [String: Any]
+                var arr: [(Double, String)] = []
+                almostData.forEach({ (i) in
+                    
+                    let val = i.value as! [String : Any]
+                    arr.append((Double(val["percentage"] as! String)!, val["timestamp"] as! String))
+                    arr = arr.sorted(by: { (i, j) -> Bool in
+                        i.1 >= j.1
+                    })
+                })
+                
+                    var boundaries = 30
+                    
+                    if(arr.count < 30) {
+                        boundaries = arr.count
+                    }
+                    
+                    let finalArr: [Double] = arr[0..<boundaries].map { i in
+                        i.0
+                    }.reversed()
+                    
+                    self.updateChart(data: finalArr)
             })
         }
         
         // Do any additional setup after loading the view.
     }
     
-    func updateChart(data: [String]) {
+    func updateChart(data: [Double]) {
         var lineChartEntry = [ChartDataEntry]()
         
-        for i in 0..<10 {
-            let value = ChartDataEntry(x: Double(i), y: Double(i) * 2.0)
+        for i in 0..<data.count {
+            let value = ChartDataEntry(x: Double(i), y: data[i])
             
             lineChartEntry.append(value)
         }
         
-        let line = LineChartDataSet(values: lineChartEntry, label: "Number xd")
+        let line = LineChartDataSet(values: lineChartEntry, label: "")
         line.colors = [UIColor.red]
+        line.circleColors = [UIColor.black]
+        line.circleRadius = 1.0
         
         let data = LineChartData()
         

@@ -52,7 +52,7 @@ class TrashesViewController: UIViewController, UITableViewDelegate, UITableViewD
         ref.child("/analysis/sorted").observe(DataEventType.value) { (snapshot) in
             let newData = snapshot.value as? [String : AnyObject] ?? [:]
             
-            print(snapshot)
+            //print(snapshot)
             
             self.arr = []
             
