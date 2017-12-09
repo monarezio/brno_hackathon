@@ -4,12 +4,10 @@ public class Trash {
 
     private String mac;
     private int percentage;
-    private boolean finished;
 
-    public Trash(String mac, int percentage, boolean finished) {
+    public Trash(String mac, int percentage) {
         this.mac = mac;
         this.percentage = percentage;
-        this.finished = finished;
     }
 
     public String getMac() {
@@ -20,7 +18,4 @@ public class Trash {
         return percentage;
     }
 
-    public boolean isFinished() {
-        return finished;
-    }
 }

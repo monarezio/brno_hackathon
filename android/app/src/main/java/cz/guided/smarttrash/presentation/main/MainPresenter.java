@@ -12,8 +12,6 @@ public class MainPresenter extends Presenter<MainView> {
     }
 
     public void showThrashes() {
-        viewIfExists().subscribe(view -> {
-            view.goToTrashes();
-        });
+        viewIfExists().subscribe(MainView::goToTrashes);
     }
 }
