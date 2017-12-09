@@ -58,13 +58,14 @@ public class AnalyticsActivity extends Activity {
                         for (DataSnapshot child : snapshot.getChildren()) {
                             entries.add(new Entry(count++, Float.parseFloat(child.child("percentage").getValue().toString())));
                         }
-                        LineDataSet dataSet = new LineDataSet(entries, "Trash percentages over time"); // add entries to dataset
+                        List<Entry> entryTail = entries.subList(Math.max(entries.size() - 30, 0), entries.size());
+                        LineDataSet dataSet = new LineDataSet(entryTail, "Trash percentages over time"); // add entries to dataset
                         dataSet.setColor(Color.BLACK);
                         dataSet.setValueTextColor(Color.BLACK);
                         Description desc = new Description();
                         desc.setText("");
                         graphView.setDescription(desc);
-                        if (entries.isEmpty()) {
+                        if (entryTail.isEmpty()) {
                             graphView.clear();
                         } else {
                             // set data

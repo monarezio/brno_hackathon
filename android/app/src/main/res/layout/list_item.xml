@@ -14,7 +14,8 @@
         android:layout_marginLeft="18dp"
         android:paddingTop="18dp"
         android:text="TextView"
-        android:textSize="18dp" />
+        android:textColor="@color/white"
+        android:textSize="22dp" />
 
     <TextView
         android:id="@+id/desc"
@@ -24,7 +25,9 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/title"
         android:layout_marginLeft="18dp"
+        android:clipToPadding="false"
         android:paddingBottom="18dp"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textColor="@color/white" />
 
 </RelativeLayout>
