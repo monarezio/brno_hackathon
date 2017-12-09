@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B16C154E9C0F7FF1B1B537F3DF34761D'
-               BlueprintName = 'PopupDialog'
+               BlueprintIdentifier = '8A421C6298CB3DF5D749193BD6FD0B38'
+               BlueprintName = 'BEMSimpleLineGraph'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'PopupDialog.framework'>
+               BuildableName = 'BEMSimpleLineGraph.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

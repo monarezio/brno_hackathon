@@ -48,11 +48,18 @@ class TrashesViewController: UIViewController, UITableViewDelegate, UITableViewD
         ref.child("/analysis/sorted").observe(DataEventType.value) { (snapshot) in
             let newData = snapshot.value as? [String : AnyObject] ?? [:]
             
+            print(snapshot)
+            
             self.arr = []
             
             newData.forEach({ i in
                 let a = i.value as! [String: Any]
-                let b = Int(Float("\(a["percentage"]!)")!)
+                
+                var b = 0
+                if let percent = a["percentage"] {
+                    b = Int(Float("\(percent)")!)
+                }
+                
                 
                 self.arr.append((i.key, "\(b)"))
             })
