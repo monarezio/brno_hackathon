@@ -41,8 +41,8 @@
             </p>
         </aside>
 
-        <section class="content col">
-            <section class="info row justify-content-center" v-show="data">
+        <section class="content col d-flex flex-column align-items-center">
+            <section class="info row" v-show="data">
                 <div class="col-4 list__item" v-for="item in data">
                     <div class="row">
                         <div class="icon" v-bind:class="item.clas">
@@ -55,9 +55,12 @@
                 </div>
 
                 <div class="overlay"></div>
-
-                <button class="btn btn-dark mt-2">Load more</button>
             </section>
+
+
+            <button class="btn btn-dark mt-2">Load more</button>
+
+            <!--<canvas id="chart" width="600" height="400"></canvas>-->
         </section>
     </section>
 </template>
